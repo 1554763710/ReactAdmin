@@ -1,8 +1,11 @@
 
 import React,{Component} from "react";
 import {
-  Form, Icon, Input, Button,
+  Form, Icon, Input, Button, message
 } from 'antd';
+
+import { reqLogin } from "../../api";
+import { setItem } from "../../utils/localstoragetool";
 
 import logo from "./logo.png";
 import "./index.less";
@@ -12,6 +15,28 @@ class Login extends Component{
   
   handleSubmit = (e)=>{
     e.preventDefault();
+    // 表单校验
+    this.props.form.validateFields(async ( err, values )=>{
+      if(!err){
+      // 校验成功
+        const { username, password } = values;
+        const result = await reqLogin({ username, password });
+        console.log(result)
+        if(result.status === 0){
+          message.success("用户登录成功~",1);
+          //保存用户信息到localStorage
+          setItem(result.data);
+          //跳转到admin页面
+          this.props.history.replace("/");
+        }else{
+          message.error(result.msg, 2)
+        }
+        
+      }else{
+      // 校验失败
+        console.log(err);
+      }
+    })
   }
   
   validator = (rule,value,callback)=>{
@@ -49,7 +74,7 @@ class Login extends Component{
                 {pattern: /^[a-zA-Z0-9]+$/, message:"用户名必须是英文、数组或下划线组成"}
               ]
             })(
-              <Input prefix={<Icon type="" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+              <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
             )}
           </Form.Item>
           <Form.Item>
