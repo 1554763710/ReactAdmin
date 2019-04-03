@@ -7,7 +7,7 @@ import {
 import { reqLogin } from "../../api";
 import { setItem } from "../../utils/localstoragetool";
 
-import logo from "./logo.png";
+import logo from "../../assets/images/logo.png";
 import "./index.less";
 
 @Form.create()

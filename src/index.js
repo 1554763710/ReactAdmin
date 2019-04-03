@@ -5,6 +5,6 @@ import { BrowserRouter } from "react-router-dom"
 
 import App from "./App";
 
-import "./assets/reset.less";
+import "./assets/less/reset.less";
 
 ReactDOM.render(<BrowserRouter><App/></BrowserRouter>, document.getElementById("root"));
