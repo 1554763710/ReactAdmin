@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a06cb8e1-1312-4dd0-aa29-4aea43a7becb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/bar/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/home/index.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/line/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/pie/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/role/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/user/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mybutton/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/mybutton/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/index.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/headermain/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headermain/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/headermain/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/headermain/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/admin/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/index.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/category/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/index.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,17 +23,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/admin/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/pages/category/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="366">
+              <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
               <folding>
                 <element signature="e#1#39#0" expanded="true" />
-                <element signature="e#559#776#0" />
-                <element signature="e#810#877#0" />
-                <element signature="e#961#1237#0" />
-                <element signature="e#1246#1785#0" />
+                <element signature="e#247#533#0" />
+                <element signature="e#541#903#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/category/index.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -90,14 +88,11 @@
         <option value="$PROJECT_DIR$/src/utils/localstoragetool.js" />
         <option value="$PROJECT_DIR$/src/utils/memorytool.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/category/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/product/index.jsx" />
         <option value="$PROJECT_DIR$/src/config/menuConfig.js" />
         <option value="$PROJECT_DIR$/src/components/letNav/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/login/index.jsx" />
-        <option value="$PROJECT_DIR$/src/components/headermain/index.less" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
-        <option value="$PROJECT_DIR$/src/components/headermain/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/admin/index.less" />
         <option value="$PROJECT_DIR$/src/pages/home/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/home/index.less" />
@@ -107,6 +102,12 @@
         <option value="$PROJECT_DIR$/src/pages/line/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/pie/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/admin/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/mybutton/index.less" />
+        <option value="$PROJECT_DIR$/src/components/mybutton/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/headermain/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/headermain/index.less" />
+        <option value="$PROJECT_DIR$/src/pages/category/index.less" />
+        <option value="$PROJECT_DIR$/src/pages/category/index.jsx" />
       </list>
     </option>
   </component>
@@ -132,7 +133,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-19" />
     <option name="y" value="12" />
     <option name="width" value="1300" />
@@ -157,6 +158,19 @@
               <item name="react-admin" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -214,12 +228,12 @@
       <workItem from="1554101989243" duration="7388000" />
       <workItem from="1554117290734" duration="4388000" />
       <workItem from="1554174305893" duration="19725000" />
-      <workItem from="1554250566284" duration="17410000" />
+      <workItem from="1554250566284" duration="21978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56425000" />
+    <option name="totallyTimeSpent" value="60993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="12" width="1300" height="752" extended-state="0" />
@@ -270,6 +284,7 @@
           <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
           <folding>
             <element signature="e#1#39#0" expanded="true" />
+            <element signature="e#336#363#0" expanded="true" />
             <element signature="e#559#776#0" />
             <element signature="e#810#877#0" />
             <element signature="e#961#1237#0" />
@@ -301,13 +316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -399,13 +407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/category/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/product/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -456,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/headermain/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/menuConfig.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-514">
@@ -484,20 +478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/headermain/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-          <folding>
-            <element signature="e#1#48#0" expanded="true" />
-            <element signature="e#353#475#0" />
-            <element signature="e#177#187#0" />
-            <element signature="n#!!block;n#componentDidMount#0;n#HeaderMain#0" />
-            <element signature="n#!!block;n#componentWillUnmount#0;n#HeaderMain#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -560,16 +540,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/headermain/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+          <folding>
+            <element signature="e#1#48#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#HeaderMain#0" />
+            <element signature="n#!!block;n#componentWillUnmount#0;n#HeaderMain#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/mybutton/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/mybutton/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/headermain/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/admin/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="418">
+          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
           <folding>
             <element signature="e#1#39#0" expanded="true" />
+            <element signature="e#336#363#0" expanded="true" />
             <element signature="e#559#776#0" />
             <element signature="e#810#877#0" />
             <element signature="e#961#1237#0" />
             <element signature="e#1246#1785#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/category/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/category/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="53" column="12" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+            <element signature="e#247#533#0" />
+            <element signature="e#541#903#0" />
           </folding>
         </state>
       </provider>

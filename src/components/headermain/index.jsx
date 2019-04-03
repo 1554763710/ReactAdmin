@@ -8,6 +8,7 @@ import { removeItem } from "../../utils/localstoragetool";
 import memory from "../../utils/memorytool";
 import { reqWeather } from "../../api";
 import menuList from "../../config/menuConfig";
+import MyButton from "../mybutton";
 
 
 import "./index.less";
@@ -86,7 +87,7 @@ class HeaderMain extends Component{
     return <Fragment>
       <Row className="header-main-top">
         <span>欢迎, {username}</span>
-        <button onClick={this.logout}>退出</button>
+        <MyButton onClick={this.logout}>退出</MyButton>
       </Row>
       <Row className="header-main-bottom">
         <Col className="h-m-b-left" span={6}>{title}</Col>
