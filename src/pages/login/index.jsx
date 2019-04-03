@@ -21,7 +21,6 @@ class Login extends Component{
       // 校验成功
         const { username, password } = values;
         const result = await reqLogin({ username, password });
-        console.log(result)
         if(result.status === 0){
           message.success("用户登录成功~",1);
           //保存用户信息到localStorage

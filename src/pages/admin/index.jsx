@@ -1,17 +1,23 @@
 
 import React,{Component} from "react";
 import { Layout } from 'antd';
-import { Route } from "react-router-dom";
+import { Route, Switch, Redirect} from "react-router-dom";
 
 import { getItem } from "../../utils/localstoragetool";
 import momery from "../../utils/memorytool";
 import LeftNav from "../../components/letNav";
+import HeaderMain from "../../components/headermain";
+//路由组件
 import Home from "../home";
 import Category from "../category";
 import Product from "../product";
-import HeaderMain from "../../components/headermain";
+import User from "../user";
+import Role from "../role";
+import Bar from "../bar";
+import Line from "../line";
+import Pie from "../pie";
 
-
+import "./index.less";
 
 const {
   Header, Content, Footer, Sider,
@@ -54,10 +60,18 @@ export default class Admin extends Component{
             <HeaderMain />
           </Header>
           <Content style={{ margin: '30px 16px' }}>
-            <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-              <Route path="/home" component={Home}/>
-              <Route path="/category" component={Category}/>
-              <Route path="/product" component={Product}/>
+            <div className="content" style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+              <Switch>
+                <Route path="/home" component={Home}/>
+                <Route path="/category" component={Category}/>
+                <Route path="/product" component={Product}/>
+                <Route path="/user" component={User}/>
+                <Route path="/role" component={Role}/>
+                <Route path="/charts/bar" component={Bar}/>
+                <Route path="/charts/line" component={Line}/>
+                <Route path="/charts/pie" component={Pie}/>
+                <Redirect to="/home"/>
+              </Switch>
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>

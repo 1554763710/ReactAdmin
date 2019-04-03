@@ -1,10 +1,14 @@
 
 import React,{Component} from "react";
 
+import "./index.less";
+
 export default class Home extends Component{
   render(){
     return(
-      <div>home</div>
+      <div className="home">
+        欢迎使用尚硅谷后台管理系统
+      </div>
     )
   }
 }
