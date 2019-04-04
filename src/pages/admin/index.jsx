@@ -33,10 +33,10 @@ export default class Admin extends Component{
     };
     //判断用户是否登录过
     const user = getItem();
-    if(!user||!user._id){
-      this.props.history.replace("/login");
+    if(user && user._id){
+      momery.user = user;
     }
-    momery.user = user;
+    
   }
   
   onCollapse = (collapsed) => {
@@ -46,6 +46,11 @@ export default class Admin extends Component{
   
   render() {
     const opacity = this.state.collapsed ? 0 : 1;
+    
+    if(!momery.user || !momery.user._id){
+      return <Redirect to="/login"/>
+    }
+    
     return (
       <Layout style={{ minHeight: '100vh' }}>
         <Sider

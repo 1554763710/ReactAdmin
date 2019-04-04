@@ -1,50 +1,51 @@
 
 import React,{Component} from "react";
-import { Card, Button, Icon, Table } from 'antd';
+import { Card, Button, Icon, Table, message } from 'antd';
 
 import MyButton from "../../components/mybutton";
+import { reqCategory } from "../../api";
 
 import "./index.less";
 
 export default class Category extends Component{
-  render(){
-    const columns = [
-      {
-        title: '品类名称',
-        dataIndex: 'name',
-        
-      }, {
-        title: '操作',
-        dataIndex: 'operation',
-        className: 'operation',
-        render: () => <div>
-          <MyButton>修改名称</MyButton>
-          <MyButton>查看其子品类</MyButton>
-        </div>,
-      }
-    ];
+  state = {
+    categories: []
+  }
   
-    const data = [
-      {
-        key: '1',
-        name: '手机'
-      }, {
-        key: '2',
-        name: '电脑'
-      }, {
-        key: '3',
-        name: '平板'
-      }, {
-        key: '4',
-        name: 'xx'
-      }, {
-        key: '5',
-        name: 'zzz'
-      }, {
-        key: '6',
-        name: 'aaa'
-      }
-    ];
+  columns = [
+    {
+      title: '品类名称',
+      dataIndex: 'name',
+      
+    }, {
+      title: '操作',
+      dataIndex: 'operation',
+      className: 'operation',
+      render: () => <div>
+        <MyButton>修改名称</MyButton>
+        <MyButton>查看其子品类</MyButton>
+      </div>,
+    }
+  ];
+  
+  getCategory = async (parentId)=>{
+    const result = await reqCategory(parentId);
+    
+    if(result.status === 0){
+      this.setState({
+        categories: result.data
+      })
+    }else{
+      message.error(result.msg)
+    }
+    
+  }
+  
+  componentDidMount(){
+    this.getCategory("0");
+  }
+  
+  render(){
     
     return(
       <Card
@@ -53,8 +54,8 @@ export default class Category extends Component{
         className="category"
       >
         <Table
-          columns={columns}
-          dataSource={data}
+          columns={this.columns}
+          dataSource={this.state.categories}
           bordered
           pagination={{
             showSizeChanger: true,
@@ -62,6 +63,7 @@ export default class Category extends Component{
             defaultPageSize: 3,
             showQuickJumper: true
           }}
+          rowKey={"_id"}
         />,
       </Card>
     )

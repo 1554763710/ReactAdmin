@@ -25,3 +25,6 @@ export const reqWeather = (city)=> {
   })
   
 }
+
+//获取品类数据
+export const reqCategory = (parentId)=> ajax(path+"/manage/category/list",{parentId});
