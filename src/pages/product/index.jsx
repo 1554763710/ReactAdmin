@@ -1,19 +1,56 @@
 
 import React,{Component, Fragment} from "react";
 import { Card, Table, Button, Input, Select, Icon, message} from "antd";
+import { Link } from "react-router-dom";
 
 import MyButton from "../../components/mybutton";
 import { reqGetProducts } from "../../api";
 
+import "./index.less";
+
 
 const Option = Select.Option;
 
-export default class Product extends Component{
+export default class Index extends Component{
   
   state = {
     products: [],
     total: 0
   }
+  
+  columns = [
+    {
+      title: '商品名称',
+      dataIndex: 'name',
+      key: 'name',
+    }, {
+      title: '商品描述',
+      dataIndex: 'desc',
+      key: 'desc',
+    }, {
+      title: '价格',
+      dataIndex: 'price',
+      key: 'price',
+    },{
+      title: '状态',
+      key: 'state',
+      render: ()=>{
+        return <Fragment>
+          <Button type="primary">下架</Button>&nbsp;&nbsp;
+          <span>在售</span>
+        </Fragment>
+      }
+    },{
+      title: '操作',
+      key: 'handle',
+      render: ()=>{
+        return <Fragment>
+          <MyButton>详情</MyButton>&nbsp;&nbsp;
+          <MyButton>修改</MyButton>
+        </Fragment>
+      }
+    }
+  ];
   
   getProducts = async (pageNum, pageSize = 3 )=>{
     const result = await reqGetProducts(pageNum, pageSize)
@@ -32,60 +69,26 @@ export default class Product extends Component{
   }
   
   render(){
-  
-    
-    const columns = [
-      {
-        title: '商品名称',
-        dataIndex: 'name',
-        key: 'name',
-      }, {
-        title: '商品描述',
-        dataIndex: 'desc',
-        key: 'desc',
-      }, {
-        title: '价格',
-        dataIndex: 'price',
-        key: 'price',
-      },{
-        title: '状态',
-        key: 'state',
-        render: ()=>{
-          return <Fragment>
-            <Button type="primary">下架</Button>&nbsp;&nbsp;
-            <span>在售</span>
-          </Fragment>
-        }
-      },{
-        title: '操作',
-        key: 'handle',
-        render: ()=>{
-          return <Fragment>
-            <MyButton>详情</MyButton>&nbsp;&nbsp;
-            <MyButton>修改</MyButton>
-          </Fragment>
-        }
-      }
-    ];
     const { products, total } = this.state;
   
     return(
       <Card
         title={
           <Fragment>
-            <Select defaultValue="根据商品名称" style={{ width: 150 }}>
+            <Select defaultValue="根据商品名称" className="index-select">
               <Option key={0} value={0}>根据商品名称</Option>
               <Option key={1} value={1}>根据商品描述</Option>
             </Select>
-            <Input placeholder="关键字" style={{width: 200,margin: "0 10px"}}/>
+            <Input placeholder="关键字" className="index-inp"/>
             <Button type="primary">搜索</Button>
           </Fragment>
         }
-        extra={<Button type="primary"><Icon type="plus"/>添加产品</Button>}
+        extra={<Link to="/product/saveupdate"><Button type="primary"><Icon type="plus"/>添加产品</Button></Link>}
+        className="index"
       >
         <Table
           dataSource={products}
-          columns={columns}
+          columns={this.columns}
           bordered
           loading={false}
           pagination={{
@@ -97,6 +100,7 @@ export default class Product extends Component{
             onChange: this.getProducts,
             onShowSizeChange: this.getProducts
           }}
+          rowKey={"_id"}
         />
       
       </Card>
