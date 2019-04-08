@@ -41,21 +41,10 @@ export default class Category extends Component{
     }
   ];
   
-  isLoading = true;
-  //获取分类列表
   getCategory = async (parentId)=>{
     const result = await reqCategory(parentId);
-  
-    if(result.status === 0){
-  
-      if(result.data.length===0){
-        this.isLoading = false;
     
-        setTimeout(()=>{
-          this.isLoading = true;
-        },0)
-      }
-      
+    if(result.status === 0){
       if(parentId === "0"){
         this.setState({
           categories: result.data
@@ -65,14 +54,16 @@ export default class Category extends Component{
           subcategories: result.data
         })
       }
-      
     }else{
       message.error(result.msg)
     }
     
   }
   
-  //添加分类
+  componentDidMount(){
+    this.getCategory("0");
+  }
+  
   addCategory = ()=>{
     const { validateFields } = this.addCategoryRef.current.props.form;
     const { categories, subcategories } = this.state;
@@ -81,15 +72,19 @@ export default class Category extends Component{
       if(!err){
         const result = await reqAddCategory(values);
         const { parentId } = values;
-        const options = {isVisible: false};
         if(result.status === 0){
           message.success("添加分类成功");
           if(parentId === "0"){
-            options.categories = [...categories,result.data];
-          }else if(parentId === this.state.subCategory._id){
-            options.subcategories = [...subcategories,result.data];
+            this.setState({
+              isVisible: false,
+              categories: [...categories,result.data]
+            })
+          }else{
+            this.setState({
+              isVisible: false,
+              subcategories: [...subcategories,result.data]
+            })
           }
-          this.setState(options)
         }else{
           message.error(result.msg)
         }
@@ -97,7 +92,7 @@ export default class Category extends Component{
     })
     
   }
-  //点击显示更新分类
+  
   isUpdateCategoryN = (category)=>{
     return ()=>{
       this.setState({
@@ -106,7 +101,7 @@ export default class Category extends Component{
       this.isShowModal("isUpdateVisible",true)();
     }
   }
-  //更新分类名称
+  
   updateCName = ()=>{
     const { validateFields, resetFields } = this.updateCategoryRef.current.props.form;
     validateFields( async (err,values)=>{
@@ -140,7 +135,7 @@ export default class Category extends Component{
     })
     
   }
-  //点击显示二级列表
+  
   showSubCategory = (subCategory)=>{
     return ()=>{
       this.setState({
@@ -150,7 +145,7 @@ export default class Category extends Component{
       this.getCategory(subCategory._id)
     }
   }
-  //切换是否显示
+  
   isShowModal = (name,isShow)=>{
     return ()=>{
       this.setState({
@@ -158,15 +153,11 @@ export default class Category extends Component{
       })
     }
   }
-  //回退到一级列表
+  
   goBack = ()=>{
     this.setState({
       isShowSubC: false
     })
-  }
-  
-  componentDidMount(){
-    this.getCategory("0");
   }
   
   render(){
@@ -196,11 +187,6 @@ export default class Category extends Component{
             showQuickJumper: true
           }}
           rowKey={"_id"}
-          loading={
-            isShowSubC?
-            this.isLoading && !subcategories.length:
-            this.isLoading && !categories.length
-          }
         />
         <Modal
           title="添加分类"

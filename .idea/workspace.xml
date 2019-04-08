@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/pages/category/updatecategoryname.jsx" line="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a06cb8e1-1312-4dd0-aa29-4aea43a7becb" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src-frist/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/api/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/assets/less/reset.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/components/headermain/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/components/headermain/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/components/letNav/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/components/letNav/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/components/mybutton/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/components/mybutton/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/config/menuConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/admin/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/admin/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/bar/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/category/addcategoryfrom.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/category/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/category/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/category/updatecategoryname.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/home/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/home/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/line/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/login/bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/login/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/login/index.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/pie/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/product/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/role/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/pages/user/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/utils/localstoragetool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src-frist/utils/memorytool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/addcategoryfrom.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/category/updatecategoryname.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/index.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,15 +57,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/category/index.jsx">
+        <entry file="file://$PROJECT_DIR$/src/pages/product/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="348">
+              <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
               <folding>
-                <element signature="e#1#39#0" expanded="true" />
-                <element signature="e#321#617#0" />
-                <element signature="e#284#330#0" />
-                <element signature="e#262#272#0" />
+                <element signature="e#1#49#0" expanded="true" />
+                <element signature="e#461#840#0" />
               </folding>
             </state>
           </provider>
@@ -37,8 +72,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="484">
+              <caret line="38" column="83" selection-start-line="38" selection-start-column="83" selection-end-line="38" selection-end-column="83" />
               <folding>
                 <element signature="e#302#720#0" />
               </folding>
@@ -89,7 +124,6 @@
         <option value="$PROJECT_DIR$/src/utils/localstoragetool.js" />
         <option value="$PROJECT_DIR$/src/utils/memorytool.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/pages/product/index.jsx" />
         <option value="$PROJECT_DIR$/src/config/menuConfig.js" />
         <option value="$PROJECT_DIR$/src/components/letNav/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/login/index.jsx" />
@@ -107,8 +141,11 @@
         <option value="$PROJECT_DIR$/src/components/headermain/index.less" />
         <option value="$PROJECT_DIR$/src/pages/category/index.less" />
         <option value="$PROJECT_DIR$/src/pages/admin/index.jsx" />
-        <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/category/addcategoryfrom.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/category/updatecategoryname.jsx" />
         <option value="$PROJECT_DIR$/src/pages/category/index.jsx" />
+        <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/product/index.jsx" />
       </list>
     </option>
   </component>
@@ -148,7 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,10 +203,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="react-admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,16 +228,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\html\react-admin" />
+      <recent name="D:\work\html\react-admin\src\pages" />
+      <recent name="D:\work\html\react-admin\src\pages\login" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\work\html\react-admin\src\components\letNav" />
       <recent name="D:\work\html\react-admin\src\assets\images" />
       <recent name="D:\work\html\react-admin\src\assets\less" />
       <recent name="D:\work\html\react-admin\src\pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work\html\react-admin" />
-      <recent name="D:\work\html\react-admin\src\pages" />
-      <recent name="D:\work\html\react-admin\src\pages\login" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -223,15 +267,18 @@
       <workItem from="1554117290734" duration="4388000" />
       <workItem from="1554174305893" duration="19725000" />
       <workItem from="1554250566284" duration="30121000" />
-      <workItem from="1554342541672" duration="3718000" />
+      <workItem from="1554342541672" duration="11584000" />
+      <workItem from="1554611810158" duration="11967000" />
+      <workItem from="1554683208114" duration="7285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72854000" />
+    <option name="totallyTimeSpent" value="99972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-19" y="12" width="1300" height="752" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21077655" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -241,7 +288,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.23778501" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.08306189" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -269,35 +316,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/category/index.jsx</url>
-          <line>33</line>
-          <option name="timeStamp" value="3" />
+          <line>171</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/category/index.jsx</url>
+          <line>215</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/category/index.jsx</url>
+          <line>27</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pages/category/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/admin/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/letNav/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -364,13 +400,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../js/node课件/React全家桶/React项目/code/react-server-final/routers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../js/node课件/React全家桶/React项目/code/react-server-final/routers/index.js" />
     <entry file="file://$PROJECT_DIR$/src/utils/localstoragetool.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -382,13 +412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/product/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -556,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="e#302#720#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -573,15 +586,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/category/index.jsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/category/addcategoryfrom.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="176">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
             <element signature="e#1#39#0" expanded="true" />
-            <element signature="e#321#617#0" />
-            <element signature="e#284#330#0" />
-            <element signature="e#262#272#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/category/updatecategoryname.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-frist/api/ajax.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/category/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="118" column="10" lean-forward="true" selection-start-line="117" selection-start-column="36" selection-end-line="118" selection-end-column="10" />
+          <folding>
+            <element signature="e#1#39#0" expanded="true" />
+            <element signature="e#417#726#0" />
+            <element signature="e#742#1134#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="38" column="83" selection-start-line="38" selection-start-column="83" selection-end-line="38" selection-end-column="83" />
+          <folding>
+            <element signature="e#302#720#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/product/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+          <folding>
+            <element signature="e#1#49#0" expanded="true" />
+            <element signature="e#461#840#0" />
           </folding>
         </state>
       </provider>

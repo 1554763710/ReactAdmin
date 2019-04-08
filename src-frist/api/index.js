@@ -34,6 +34,3 @@ export const reqAddCategory = (data)=> ajax(path+"/manage/category/add",data,"PO
 
 //更新品类名称
 export const reqUpdateCategory = (data)=> ajax(path+"/manage/category/update",data,"POST");
-
-//获取商品列表
-export const reqGetProducts = (pageNum, pageSize)=> ajax(path+"/manage/product/list",{pageNum, pageSize});
