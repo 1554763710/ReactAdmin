@@ -3,9 +3,9 @@ import React,{Component} from "react";
 import { Card, Icon, Form, Input, Cascader, InputNumber, Button, message } from "antd";
 
 import RichEditor from "./richtext";
-import {reqCategory} from "../../api";
+import {reqCategory, reqAddProduct} from "../../../api";
 
-import "./saveupdate.less";
+import "./index.less";
 
 
 const Item = Form.Item;
@@ -36,9 +36,30 @@ class SaveUpdate extends Component{
   //点击提交得到的数据
   submit = (e)=>{
     e.preventDefault();
-    console.log(this.richEditorRef.current.state.editorState.toHTML())
-    this.props.form.validateFields((err, values)=>{
-      console.log(values)
+    this.props.form.validateFields( async (err, values)=>{
+      
+      if(!err){
+        const {name, desc, category, price} = values;
+        const detail = this.richEditorRef.current.state.editorState.toHTML();
+        let categoryId,pCategoryId;
+        if(category.length === 1){
+          pCategoryId = "0";
+          categoryId = category[0];
+        }else{
+          pCategoryId = category[0];
+          categoryId = category[1];
+        }
+        const result = await reqAddProduct({ name, desc, price, detail, pCategoryId, categoryId });
+        console.log(result);
+        if(result.status === 0){
+          message.success("添加商品成功");
+          this.props.history.goBack();
+        }else{
+          message.error(result.msg);
+        }
+        
+      }
+      
     })
   }
   

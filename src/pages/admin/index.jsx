@@ -10,7 +10,7 @@ import HeaderMain from "../../components/headermain";
 //路由组件
 import Home from "../home";
 import Category from "../category";
-import Product from "../product/products";
+import Product from "../product";
 import User from "../user";
 import Role from "../role";
 import Bar from "../bar";

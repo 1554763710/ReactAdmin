@@ -25,7 +25,6 @@ export default class RichEditor extends React.Component {
   }
   
   render () {
-    
     const { editorState } = this.state
     return (
       <div style={{border: "1px solid #d9d9d9", height: 300, borderRadius: 4}}>
