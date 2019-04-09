@@ -3,7 +3,8 @@ import React,{Component} from "react";
 import { Card, Icon, Form, Input, Cascader, InputNumber, Button, message } from "antd";
 
 import RichEditor from "./richtext";
-import {reqCategory, reqAddProduct} from "../../../api";
+import {reqCategory, reqAddProduct, reqUpdateProduct } from "../../../api";
+import PicturesWall from "./picwall";
 
 import "./index.less";
 
@@ -49,10 +50,20 @@ class SaveUpdate extends Component{
           pCategoryId = category[0];
           categoryId = category[1];
         }
-        const result = await reqAddProduct({ name, desc, price, detail, pCategoryId, categoryId });
-        console.log(result);
+        const { location: { state } } = this.props;
+        let result;
+        let msg = "";
+        
+        if(state){
+          msg = "修改商品成功";
+          console.log(detail);
+          result = await reqUpdateProduct({ name, desc, price, detail, pCategoryId, categoryId, _id: state._id });
+        }else{
+          msg = "添加商品成功";
+          result = await reqAddProduct({ name, desc, price, detail, pCategoryId, categoryId });
+        }
         if(result.status === 0){
-          message.success("添加商品成功");
+          message.success(msg);
           this.props.history.goBack();
         }else{
           message.error(result.msg);
@@ -63,9 +74,7 @@ class SaveUpdate extends Component{
     })
   }
   
-  onChange = (value)=>{
   
-  }
   //获取分类列表
   getCategory = async (parentId)=>{
     
@@ -110,20 +119,53 @@ class SaveUpdate extends Component{
     targetOption.loading = true;
     this.getCategory(targetOption.value)
   }
-  
+  //初次渲染获取
   componentDidMount(){
-    this.getCategory("0")
+    this.getCategory("0");
+    //修改商品设置分类
+    const { state  } = this.props.location;
+    if(state){
+      const { pCategoryId, categoryId } = state;
+      if(pCategoryId === "0"){
+        this.category = [ categoryId ]
+      }else{
+        this.category = [ pCategoryId, categoryId]
+      }
+      this.getCategory(pCategoryId);
+    }
   }
   
   render (){
+      /*{…}
+  __v:
+  0
+  _id:
+  "5caab280aea7c918a876506f"
+  categoryId:
+  "5caab260aea7c918a876506e"
+  desc:
+  "肾1"
+  detail:
+  "<p>肾1</p>\n"
+  imgs:
+  Array[0]
+  name:
+  "肾1"
+  pCategoryId:
+  "5ca4b5290765861a14206b48"
+  price:
+  10000
+  status:
+  2*/
+    
   
     const { options } = this.state;
-    const { getFieldDecorator } = this.props.form;
+    const { form: { getFieldDecorator } ,location: { state } } = this.props;
     return (
       <Card
         title={<div className="add-product">
           <Icon onClick={this.goBack} type="arrow-left" className="icon"/>
-          <span>添加商品</span>
+          <span>{state?"修改商品":"添加商品"}</span>
         </div>}
       >
         <Form {...this.formItemLayout} onSubmit={this.submit}>
@@ -131,7 +173,8 @@ class SaveUpdate extends Component{
             {getFieldDecorator(
               "name",
               {
-                rules:[{required: true,whiteSpace: true, message: "商品名称不能为空"}]
+                rules:[{required: true,whiteSpace: true, message: "商品名称不能为空"}],
+                initialValue: state? state.name:""
               }
             )(<Input placeholder="请输入商品名称"/>)}
           </Item>
@@ -139,7 +182,8 @@ class SaveUpdate extends Component{
             {getFieldDecorator(
               "desc",
               {
-                rules:[{required: true,whiteSpace: true, message: "商品描述不能为空"}]
+                rules:[{required: true,whiteSpace: true, message: "商品描述不能为空"}],
+                initialValue: state? state.desc:""
               }
             )(<Input placeholder="请输入商品描述"/>)}
           </Item>
@@ -155,11 +199,12 @@ class SaveUpdate extends Component{
             {getFieldDecorator(
               "category",
               {
-                rules:[{required: true, message: "分类不能为空"}]
+                rules:[{required: true, message: "分类不能为空"}],
+                initialValue: state? this.category:[]
               }
             )(<Cascader
               options={options}
-              onChange={this.onChange}
+              // onChange={this.onChange}
               placeholder="请选择分类"
               changeOnSelect
               loadData={this.loadData}
@@ -169,7 +214,8 @@ class SaveUpdate extends Component{
             {getFieldDecorator(
               "price",
               {
-                rules:[{required: true, message: "商品价格不能为空"}]
+                rules:[{required: true, message: "商品价格不能为空"}],
+                initialValue: state? state.price:""
               }
             )(<InputNumber
               formatter={value => `¥ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
@@ -178,6 +224,7 @@ class SaveUpdate extends Component{
               className="input-number"
             />)}
           </Item>
+          {state?<Item label="商品图片"><PicturesWall _id={state._id} imgs={state.imgs}/></Item>:""}
           <Item
             label="商品详情"
             wrapperCol = {
@@ -187,7 +234,7 @@ class SaveUpdate extends Component{
               }
             }
           >
-            <RichEditor ref={this.richEditorRef}/>
+            <RichEditor ref={this.richEditorRef} detail={state?state.detail:""}/>
           </Item>
           <Item>
             <Button className="su-btn" type="primary" htmlType="submit">提交</Button>

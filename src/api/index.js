@@ -40,3 +40,12 @@ export const reqGetProducts = (pageNum, pageSize)=> ajax(path+"/manage/product/l
 
 //添加商品
 export const reqAddProduct = (product)=> ajax(path+"/manage/product/add",product,"POST");
+
+//修改商品
+export const reqUpdateProduct = (product)=> ajax(path+"/manage/product/update",product,"POST");
+
+//删除上传图片
+export const reqDelImg = (name, id)=> ajax(path+"/manage/img/delete",{name, id},"POST");
+
+//删除上传图片
+export const reqSearchProducts = (data)=> ajax(path+"/manage/product/search",data);

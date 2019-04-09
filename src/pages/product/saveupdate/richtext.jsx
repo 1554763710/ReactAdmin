@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from "prop-types";
 // 引入编辑器组件
-import BraftEditor from 'braft-editor'
+import BraftEditor from 'braft-editor';
 // 引入编辑器样式
-import 'braft-editor/dist/index.css'
+import 'braft-editor/dist/index.css';
 
 export default class RichEditor extends React.Component {
   
@@ -11,17 +12,21 @@ export default class RichEditor extends React.Component {
     editorState: BraftEditor.createEditorState(null)
   }
   
-  async componentDidMount () {
+  static propTypes = {
+    detail: PropTypes.string
+  }
+  
+  componentDidMount () {
     // 假设此处从服务端获取html格式的编辑器内容
-    const htmlContent = "初始化数据"
+    const { detail } = this.props;
     // 使用BraftEditor.createEditorState将html字符串转换为编辑器需要的editorStat
     this.setState({
-      editorState: BraftEditor.createEditorState(htmlContent)
+      editorState: BraftEditor.createEditorState(detail)
     })
   }
   
-  handleEditorChange = (editorState) => {
-    this.setState({ editorState })
+  handleEditorChange = ( editorState )=>{
+    this.setState({ editorState });
   }
   
   render () {
