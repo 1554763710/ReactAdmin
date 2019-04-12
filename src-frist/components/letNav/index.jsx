@@ -5,8 +5,6 @@ import { Link , withRouter} from "react-router-dom";
 import PropTypes from "prop-types";
 
 import muneList from "../../config/menuConfig";
-import memory from "../../utils/memorytool";
-
 import logo from "../../assets/images/logo.png";
 import "./index.less";
 
@@ -19,8 +17,7 @@ class LeftNav extends Component{
   constructor(props){
     super(props);
     const openKeys = [];
-    const munes = this.getMenu(muneList);
-    this.munes = this.createMenu(munes,openKeys);
+    this.munes = this.createMenu(muneList,openKeys);
     this.state = {
       openKeys
     }
@@ -30,7 +27,7 @@ class LeftNav extends Component{
   static propTypes = {
     opacity: PropTypes.number.isRequired
   }
-  //定义组件合成函数
+  
   createItem = (item)=>{
     return <Item key={item.key}>
       <Link to={item.key}>
@@ -39,7 +36,7 @@ class LeftNav extends Component{
       </Link>
     </Item>
   }
-  //创建菜单
+  
   createMenu = (muneList, openKeys)=>{
     const { pathname } = this.props.location;
     return muneList.map((menu)=>{
@@ -63,21 +60,6 @@ class LeftNav extends Component{
         return this.createItem(menu)
       }
     })
-  }
-  //获取过滤后的菜单
-  getMenu = ( muneList )=>{
-    const { menus } = memory.user.role;
-    return muneList.reduce((prev, curr) => {
-      const children = curr.children;
-      if(menus.find((menu)=>menu === curr.key)){
-        if(children){
-          curr.children = children.filter((item)=>menus.find((menu)=>menu === item.key))
-        }
-        return [...prev, curr]
-      }else{
-        return prev;
-      }
-    },[])
   }
   
   onOpenChange = (openKeys)=>{
